@@ -17,6 +17,6 @@ Feel free to update the Docker file and add the additional packages you need.
         There are 2 users: root (pwd root) and myuser (pwd myuser)
         QtCreator should be started by non-root:
 
-        docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix --privileged --network host dane/qt:latest /bin/bash
+        docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix --privileged --network host -e DISPLAY=$DISPLAY dane/qt:latest /bin/bash
         su myuser
         qtcreator
